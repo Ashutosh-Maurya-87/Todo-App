@@ -22,7 +22,7 @@ setChange((preValue)=>{
     type='text'
     placeholder='enter the item'
     onChange={addEvent} 
-    vlaue={change.enter}
+    
     />
     <button >+</button>
     </>
