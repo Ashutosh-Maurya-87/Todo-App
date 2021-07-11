@@ -1,8 +1,11 @@
 .App {
   text-align: center;
 }
-h2{
+h1,h2{
   text-align: center;
+}
+input{
+  margin-left: 45%;
 }
 
 .App-logo {
