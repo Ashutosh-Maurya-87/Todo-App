@@ -5,10 +5,8 @@ import './App.css';
 
 
 function App() {
-  const btnNew='Mango';
-  const [btn,setBtn]=useState({
-         itemFirst:' '
-  });
+  //const btnNew='Mango';
+  const [btn,setBtn]=useState(' ');
   const [item,setItem]=useState(' ');
 
   // onclick button function-------------
@@ -23,7 +21,7 @@ function App() {
   const eventFunc =(event) =>{
     setBtn(event.target.value)
     setItem(event.target.value);
-    console.log(event.target.value);
+    //console.log(event.target.value);
     
   }
   
