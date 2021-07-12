@@ -10,6 +10,8 @@ function App() {
          itemFirst:' '
   });
   const [item,setItem]=useState(' ');
+
+  // onclick button function-------------
   const addFunc = () =>{
     setBtn((preValue)=>{
       console.log(preValue);
@@ -17,10 +19,12 @@ function App() {
     console.log('you click')
     console.log(btnNew);
   }
+
+  // input text event function-------
   const eventFunc =(event) =>{
     setItem(event.target.value)
     const value=event.target.value;
-console.log(value)
+    console.log(value);
   }
   
   return(
@@ -30,7 +34,7 @@ console.log(value)
     type='text'
     placeholder='enter the item'
     onChange={eventFunc}
-    value={btn}
+    value={item}
     />
     <button onClick={addFunc}>+</button>
     <h3>{btnNew}</h3>
