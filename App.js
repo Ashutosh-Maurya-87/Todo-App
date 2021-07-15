@@ -11,15 +11,12 @@ function App() {
 
   // onclick button function-------------
   const addFunc = () =>{
-    setBtn((preValue)=>{
-      console.log(preValue)
-    });
+    setBtn(item)
     console.log('you click + button')
   }
-
   // input text event function-------
   const eventFunc =(event) =>{
-    setBtn(event.target.value)
+    //setBtn(event.target.value)
     setItem(event.target.value);
     //console.log(event.target.value);
     
@@ -32,10 +29,10 @@ function App() {
     type='text'
     placeholder='enter the item'
     onChange={eventFunc}
-    value={item}
+    value={item.btn}
     />
     <button onClick={addFunc}>+</button>
-    <h3>{item}</h3>
+    <h3>{btn}</h3>
     </>
   )
   
