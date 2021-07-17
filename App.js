@@ -33,7 +33,8 @@ return [...olditem,btn]
     {
       item.map((itemval, i)=>
       {
-        <todoListItem />
+       
+       return <todoListItem  text={itemval,i}/>
       })
     }
     </ol>
