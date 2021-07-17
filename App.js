@@ -6,14 +6,11 @@ function App() {
   const [item,setItem]=useState([]);
   // onclick button function-------------
   const addFunc = () =>{
-    setBtn((olditem)=>{
+    setItem((olditem)=>{
 return [...olditem,btn]
     })
-    
   }
-  console.log('this is item', {item})
-  console.log('this is btn ', {btn})
-  // input text event function-------
+
   const eventFunc =(event) =>{
     setBtn(event.target.value);
   }
@@ -27,15 +24,16 @@ return [...olditem,btn]
     value={item.btn}
     />
     <button onClick={addFunc}>+</button>
-  <h2>{item}</h2>
-    {/* <ol>
+
+    <ol>
     {
-      item.map((itemval)=>
+      item.map((itemval, i)=>
       {
-        return <li>{itemval}</li>
+        return <li key={i}>{itemval}
+        {console.log('i value', i)}</li>
       })
     }
-    </ol> */}
+    </ol>
     </>
   )
   
