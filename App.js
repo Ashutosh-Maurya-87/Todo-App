@@ -5,32 +5,35 @@ function App() {
   const [btn,setBtn]=useState(' ');
   const [item,setItem]=useState([]);
   // onclick button function-------------
-  const addFunc = () =>{
+  const clickFunc = () =>{
     setItem((olditem)=>{
 return [...olditem,btn]
     })
+    setBtn(" ");
+    alert("Your items are added successsfully")
   }
 
   const eventFunc =(event) =>{
     setBtn(event.target.value);
   }
+  
   return(
     <>
     <h1> Todo List</h1>
     <input
-    type='text'
-    placeholder='enter the item'
+    type="text"
+    placeholder="Enter the item"
+    value={btn}
     onChange={eventFunc}
-    value={item.btn}
     />
-    <button onClick={addFunc}>+</button>
+    <button onClick={clickFunc}>Add Item</button>
 
     <ol>
     {
       item.map((itemval, i)=>
       {
-        return <li key={i}>{itemval}
-        {console.log('i value', i)}</li>
+        return <li key={i}><b>{itemval}</b>
+        </li>
       })
     }
     </ol>
