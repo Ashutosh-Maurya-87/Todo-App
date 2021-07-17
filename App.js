@@ -3,18 +3,22 @@ import './App.css';
 
 function App() {
   const [btn,setBtn]=useState(' ');
-  const [item,setItem]=useState(' ');
+  const [item,setItem]=useState([]);
   // onclick button function-------------
   const addFunc = () =>{
-    setBtn(item)
+    setBtn((olditem)=>{
+return [...olditem,btn]
+    })
+    
   }
+  console.log('this is item', {item})
+  console.log('this is btn ', {btn})
   // input text event function-------
   const eventFunc =(event) =>{
-    setItem(event.target.value);
+    setBtn(event.target.value);
   }
   return(
     <>
-    <h2>hi</h2>
     <h1> Todo List</h1>
     <input
     type='text'
@@ -23,8 +27,15 @@ function App() {
     value={item.btn}
     />
     <button onClick={addFunc}>+</button>
-    <h3>
-      {btn}</h3>
+  <h2>{item}</h2>
+    {/* <ol>
+    {
+      item.map((itemval)=>
+      {
+        return <li>{itemval}</li>
+      })
+    }
+    </ol> */}
     </>
   )
   
