@@ -2,8 +2,13 @@
   text-align: center;
 }
 
-h1,h2,h3{
+h1,h2{
   text-align: center;
+  
+}
+h3{
+  text-align: center;
+  color: rgb(143, 81, 6);
 }
 input{
   margin-left: 45%;
