@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import './App.css';
-import todoListItem from './todoListItem';
+import TodoListItem from './TodoListItem';
 
 function App() {
   const [btn,setBtn]=useState(' ');
@@ -34,7 +34,7 @@ return [...olditem,btn]
       item.map((itemval, i)=>
       {
        
-       return <todoListItem  text={itemval,i}/>
+       return <TodoListItem  text={itemval} index={i} />
       })
     }
     </ol>
