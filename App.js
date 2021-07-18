@@ -11,7 +11,7 @@ function App() {
 return [...olditem,btn]
     })
     setBtn(" ");
-    alert("Your items are added successsfully")
+   // alert("Your items are added successsfully")
   }
 
   const eventFunc =(event) =>{
