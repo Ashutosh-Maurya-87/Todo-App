@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+.removeBtn{
+  display: inline;
+  display: flex;
+  align-items: center;
+  margin-left: 45%;
+}
 
 h1,h2{
   text-align: center;
