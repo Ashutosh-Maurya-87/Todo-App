@@ -5,7 +5,7 @@ import TodoListItem from './TodoListItem';
 function App() {
   const [btn,setBtn]=useState(' ');
   const [item,setItem]=useState([]);
-  //const [remove,setRemove]=useState('')
+  
   // onclick button function-------------
   const clickFunc = () =>{
 
@@ -19,11 +19,6 @@ return [...olditem,btn]
   const eventFunc =(event) =>{
     setBtn(event.target.value);
   }
-  // delete function call-------------------
-  // const deleteFunc= ()=>{
-  //   setItem(' ');
-  //   console.log('item are deleted')
-  // }
   
   return(
     <>
