@@ -4,8 +4,8 @@ const TodoListItem = (props) =>{
     const { text, index } = props
     const [remove,setRemove]=useState('');
     const removeFunc = () =>{
-        setRemove((text)=>{
-            
+        setRemove(()=>{
+            return setRemove( ' ');
             console.log('remove',text)
         })
 
@@ -15,7 +15,7 @@ const TodoListItem = (props) =>{
     <>
     <li key={index}><b> {text} </b>
     </li>
-    <button className ='removeBtn'onClick={removeFunc}>{remove}x</button>
+    <button className ='removeBtn'onClick={removeFunc}>x</button>
     </>
     )
 }
