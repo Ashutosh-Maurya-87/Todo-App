@@ -5,7 +5,7 @@ import TodoListItem from './TodoListItem';
 function App() {
   const [btn, setBtn] = useState(' ');
   const [item, setItem] = useState([]);
-  const [remove, setRemove] = useState('');
+
 
   // onclick button function-------------
   const clickFunc = () => {
@@ -22,12 +22,7 @@ function App() {
   }
 
   const removeFunc = (id) => {
-    setItem((olditem)=>{
-      return olditem.filter((currentData, index)=>{
-          return (index !== id)
-        
-      })
-    })
+    
     console.log('re', item);
   }
 
@@ -52,7 +47,7 @@ function App() {
               key={i}
               id={i}
               onSelect={removeFunc}
-              rem={remove}
+            
             />
 
           })
