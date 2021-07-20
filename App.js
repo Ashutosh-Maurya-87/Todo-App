@@ -21,8 +21,13 @@ function App() {
     setBtn(event.target.value);
   }
 
-  const removeFunc = () => {
-    
+  const removeFunc = (id) => {
+    setItem((olditem)=>{
+      return olditem.filter((currentData, index)=>{
+          return (index !== id)
+        
+      })
+    })
     console.log('re', item);
   }
 
@@ -32,7 +37,7 @@ function App() {
       <input
         type="text"
         placeholder="Enter the item"
-        value={btn.input}
+        value={btn}
         onChange={eventFunc}
       />
       <button onClick={clickFunc}>Add Item</button>
@@ -45,7 +50,7 @@ function App() {
             return <TodoListItem
               text={itemval}
               key={i}
-              index={i}
+              id={i}
               onSelect={removeFunc}
               rem={remove}
             />
