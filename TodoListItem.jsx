@@ -1,7 +1,7 @@
 import React, { useState }  from 'react';
 import './App.css';
 const TodoListItem = (props) =>{
-    const { text, id,onSelect,rem } = props
+    const { text, id,onSelect } = props
     
     
     console.log(props)
@@ -11,7 +11,7 @@ const TodoListItem = (props) =>{
     </li>
     <button className ='removeBtn'onClick={
         onSelect(id)
-        }>{rem}X</button>
+        }>X</button>
     </>
     )
 }
