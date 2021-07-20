@@ -1,21 +1,15 @@
 import React, { useState }  from 'react';
 import './App.css';
 const TodoListItem = (props) =>{
-    const { text, index } = props
-    const [remove,setRemove]=useState('');
-    const removeFunc = () =>{
-        setRemove(()=>{
-            return setRemove( ' ');
-            console.log('remove',text)
-        })
-
-    }
+    const { text, index,onSelect,rem } = props
     
+    
+    console.log(props)
     return(
     <>
     <li key={index}><b> {text} </b>
     </li>
-    <button className ='removeBtn'onClick={removeFunc}>x</button>
+    <button className ='removeBtn'onClick={onSelect}>{rem}X</button>
     </>
     )
 }
