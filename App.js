@@ -6,7 +6,6 @@ function App() {
   const [btn, setBtn] = useState(' ');
   const [item, setItem] = useState([]);
 
-
   // onclick button function-------------
   const clickFunc = () => {
 
@@ -16,11 +15,9 @@ function App() {
     setBtn(" ");
     // alert("Your items are added successsfully")
   }
-
   const eventFunc = (event) => {
     setBtn(event.target.value);
   }
-
   const removeFunc = (id) => {
     
     console.log('re', item);
